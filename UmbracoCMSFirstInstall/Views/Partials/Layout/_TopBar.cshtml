@@ -1,0 +1,42 @@
+@using Umbraco.Cms.Api.Management.ViewModels.Media.Item
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+    var contactAddress = siteSettings?.ContactAddress ?? "Ingen address angiven";
+}
+
+<div>
+    <div>
+        <p>@contactAddress</p>
+        <div>
+            @if (siteSettings?.PlatformList != null)
+            {
+                foreach (var item in siteSettings.PlatformList)
+                {
+                    if (item.Content is SocialMediaItem mediaItem)
+                    {
+                        switch (mediaItem.PlatformName!.ToLower())
+                        {
+                            case "facebook":
+                                <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="topbar-icon">
+                                <img src="~/Images/icon-facebook.svg" alt="Facebook">
+                                </a>
+                                break;
+                            case "x":
+                                <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="topbar-icon">
+                                <img src="~/Images/icon-twitter.svg" alt="X">
+                                </a>
+                                break;
+                            case "linkedin":
+                                <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="topbar-icon">
+                                <img src="~/Images/icon-linkedin.svg" alt="Linkedin">
+                                </a>
+                                break;
+                        }
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>

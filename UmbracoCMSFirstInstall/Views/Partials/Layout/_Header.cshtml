@@ -1,0 +1,61 @@
+@using Umbraco.Cms.Api.Management.ViewModels.Media.Item
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.PublishedCache
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Cms.Core.Services.Navigation
+
+@inject IVariationContextAccessor VariationContextAccessor
+@inject IPublishedContentCache PublishedContentCache
+@inject IDocumentNavigationQueryService DocumentNavigationQueryService
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
+@*
+    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
+    This is the home page for a standard website.
+    It also highlights the current active page/section in the navigation with the CSS class "current".
+*@
+
+
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+    var logo = siteSettings?.SiteLogo;
+    var selection = Model.Root().Children().Where(x => x.IsVisible(PublishedValueFallback)).ToArray();
+}
+
+
+
+<header>
+    <nav class="header-dimensions">
+        @if (logo != null)
+        {
+            <a href="/" class="">
+                <img src="@logo.Url()" alt="Onatrix" />
+            </a>
+        }
+        else
+        {
+            <a href="/" class="">
+                Onatrix
+            </a>
+        }
+
+
+        @if (selection?.Length > 0)
+        {
+            <ul class="header-items-container">
+                @foreach (var item in selection)
+                {
+                    <li class="@(item.IsAncestorOrSelf(Model) ? "current" : null)">
+                        <a class="header-items" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
+                    </li>
+                }
+            </ul>
+        }
+
+        <div class="header-items-container"><img src="~/images/Search-Logo.svg" alt="Search">
+        </div>
+    </nav>
+</header>
