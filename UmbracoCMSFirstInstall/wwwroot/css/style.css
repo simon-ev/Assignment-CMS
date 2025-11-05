@@ -17,11 +17,111 @@
     --color-gray-400: #4B5264;
     --color-star: #333333;
     --color-gray-600: #2D303A;
+
+}
+
+/*---Richtext Start---*/
+
+.text-main {
+    color: #4F5955;
+}
+
+.text-sub-3 {
+    color: #D9C3A9;
+}
+
+.text-sub-1 {
+    color: #F2EDDC;
+}
+
+.text-body {
+    color: #535656;
+}
+
+.text-note-1 {
+    color: #9C9EA6;
+}
+
+.text-white-100 {
+    color: #F7F7F7;
+}
+
+.text-footer-black {
+    color: #0E0E0E;
+}
+
+.text-border-gray {
+    color: #EAEAEA;
+}
+
+.text-gray-400 {
+    color: #4B5264;
+}
+
+.text-star {
+    color: #333333;
+}
+
+.text-gray-600 {
+    color: #2D303A;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-rte-xl {
+    font-size: 4.375rem;
+}
+
+.text-rte-l {
+    font-size: 2.5rem;
+}
+
+.text-rte-m {
+    font-size: 1.25rem;
+}
+
+.text-rte-s {
+    font-size: 1rem;
+}
+
+.text-rte-xs {
+    font-size: 0.875rem;
+}
+
+.rte-ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    display: list-item;    
+}
+
+.rte-ul li {
+    margin-bottom: 0.25rem;
+}
+
+.rte-ul li::marker {
+    color: var(--color-sub-3);
+}
+
+/*---Richtext End---*/
+
+li {
+    list-style-position: outside;
+    overflow: hidden;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-  
+    font-family: 'Poppins', sans-serif;  
 }
 
 h3 {
@@ -30,9 +130,10 @@ h3 {
     font-weight: 700;
 }
 
-li {
-    list-style-position: outside;
-    overflow: hidden;
+.body-text {
+    color: var(--color-text-body);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .topbar-icon {
@@ -48,6 +149,8 @@ li {
     justify-items: center;
     align-items: center;
     gap: 6rem;
+    list-style-position: outside;
+    overflow: hidden;
 }
 
 .header-items-container li.current .header-items {
@@ -74,3 +177,58 @@ li {
     padding: 0 10rem 0 10rem;
 }
 
+.page-banner {
+    background-color: var(--color-white-100);
+    background-repeat: no-repeat;
+    padding: 3rem 3rem 6rem 3rem;
+    background-image: url('../images/Rectangle-Left.svg'), url('../images/Rectangle-Right.svg');
+    background-position: left bottom, top right;
+}
+
+.page-banner-container-t {
+    margin-inline: auto;  
+}
+
+.banner-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-main);
+    
+}
+
+.breadcrumb-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2.5rem;
+    
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+}
+
+.breadcrumb-text-1 {
+    font-size: 14px;
+    color: var(--color-main);
+    
+}
+
+.breadcrumb-active {
+    color: var(--color-sub-3);
+}
+
+.breadcrumb-text-container {
+    display: flex;
+    gap: 1rem; 
+}
+
+/*.content-border {
+
+}*/

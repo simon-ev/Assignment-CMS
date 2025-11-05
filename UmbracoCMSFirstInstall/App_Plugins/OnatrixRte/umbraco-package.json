@@ -1,0 +1,296 @@
+{
+  "name": "Onatrix Rte",
+  "alias": "Onatrix.Rte",
+  "extensions": [
+    {
+      "type": "tiptapToolbarExtension",
+      "kind": "styleMenu",
+      "alias": "Onatrix.TiptapStyleMenu",
+      "name": "Onatrix Tiptap Style Menu",
+      "meta": {
+        "alias": "OnatrixStyleMenu",
+        "icon": "icon-palette",
+        "label": "Onatrix Styles"
+      },
+      "items": [
+        {
+          "label": "Paragraphs",
+          "items": [
+            {
+              "label": "XL – 70",
+              "items": [
+                {
+                  "label": "Light",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-xl font-light"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Normal",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-xl font-regular"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Bold",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-xl font-bold"
+                  },
+                  "appearance": {}
+                }
+              ]
+            },
+            {
+              "label": "L – 40",
+              "items": [
+                {
+                  "label": "Light",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-l font-light"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Normal",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-l font-regular"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Bold",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-l font-bold"
+                  },
+                  "appearance": {}
+                }
+              ]
+            },
+            {
+              "label": "M – 20",
+              "items": [
+                {
+                  "label": "Light",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-m font-light"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Normal",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-m font-regular"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Bold",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-m font-bold"
+                  },
+                  "appearance": {}
+                }
+              ]
+            },
+            {
+              "label": "S – 16",
+              "items": [
+                {
+                  "label": "Light",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-s font-light"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Normal",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-s font-regular"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Bold",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-s font-bold"
+                  },
+                  "appearance": {}
+                }
+              ]
+            },
+            {
+              "label": "XS – 14",
+              "items": [
+                {
+                  "label": "Light",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-xs font-light"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Normal",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-xs font-regular"
+                  },
+                  "appearance": {}
+                },
+                {
+                  "label": "Bold",
+                  "data": {
+                    "tag": "p",
+                    "class": "text-rte-xs font-bold"
+                  },
+                  "appearance": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Bullets",
+          "data": {
+            "tag": "ul",
+            "class": "rte-ul"
+          }
+        }
+      ]
+    },
+    {
+      "type": "tiptapToolbarExtension",
+      "kind": "styleMenu",
+      "alias": "Onatrix.Tiptap.BrandColors",
+      "name": "Onatrix Brand Colors",
+      "meta": {
+        "alias": "OnatrixBrandColors",
+        "label": "Onatrix Colors"
+      },
+      "items": [
+        {
+          "label": "Main",
+          "data": {
+            "tag": "span",
+            "class": "text-main"
+          },
+          "appearance": { "style": "background-color:#4F5955; color:#ffffff; padding:5px;" }
+        },
+        {
+          "label": "Sub 3",
+          "data": {
+            "tag": "span",
+            "class": "text-sub-3"
+          },
+          "appearance": {
+            "style": "background-color:#D9C3A9; color:#333333; padding:5px;"
+          }
+        },
+        {
+          "label": "Sub 1",
+          "data": {
+            "tag": "span",
+            "class": "text-sub-1"
+          },
+          "appearance": {
+            "style": "background-color:#F2EDDC; color:#333333; padding:5px;"
+          }
+        },
+        {
+          "label": "Text Body",
+          "data": {
+            "tag": "span",
+            "class": "text-body"
+          },
+          "appearance": {
+            "style": "background-color:#535656; color:#ffffff; padding:5px;"
+          }
+        },
+        {
+          "label": "Note 1",
+          "data": {
+            "tag": "span",
+            "class": "text-note-1"
+          },
+          "appearance": {
+            "style": "background-color:#9C9EA6; color:#ffffff; padding:5px;"
+          }
+        },
+        {
+          "label": "White 100",
+          "data": {
+            "tag": "span",
+            "class": "text-white-100"
+          },
+          "appearance": {
+            "style": "background-color:#F7F7F7; color:#333333; padding:5px;"
+          }
+        },
+        {
+          "label": "Footer Black",
+          "data": {
+            "tag": "span",
+            "class": "text-footer-black"
+          },
+          "appearance": {
+            "style": "background-color:#0E0E0E; color:#ffffff; padding:5px;"
+          }
+        },
+        {
+          "label": "Border Gray",
+          "data": {
+            "tag": "span",
+            "class": "text-border-gray"
+          },
+          "appearance": {
+            "style": "background-color:#EAEAEA; color:#333333; padding:5px;"
+          }
+        },
+        {
+          "label": "Gray 400",
+          "data": {
+            "tag": "span",
+            "class": "text-gray-400"
+          },
+          "appearance": {
+            "style": "background-color:#4B5264; color:#ffffff; padding:5px;"
+          }
+        },
+        {
+          "label": "Star",
+          "data": {
+            "tag": "span",
+            "class": "text-star"
+          },
+          "appearance": {
+            "style": "background-color:#333333; color:#ffffff; padding:5px;"
+          }
+        },
+        {
+          "label": "Gray 600",
+          "data": {
+            "tag": "span",
+            "class": "text-gray-600"
+          },
+          "appearance": {
+            "style": "background-color:#2D303A; color:#ffffff; padding:5px;"
+          }
+        }
+      ]
+    }
+  ]
+}
