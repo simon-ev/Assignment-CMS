@@ -7,16 +7,16 @@
 <partial name="Partials/Layout/_PageHeader" model="(IPageHeader)Model"></>
 
 <section>
-	<div>
-		<div>
-			<aside>
+	<div class="rm-container">
+		<div class="rm-items">
+			<aside class="rm-aside body-text">
 				@Html.GetBlockListHtml(Model.ServiceDetailsAsides)
 			</aside>
 			
 			<div class="content-border">
 
 			</div>
-			<div>
+			<div class="rm-main">
 				<div>@Html.Raw(Model.ServiceDetailBody)</div>
 			</div>
 

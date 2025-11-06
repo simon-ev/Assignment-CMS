@@ -15,7 +15,7 @@
 
 <section>
     <div>
-        <div>
+        <div class="pt-1">
             @if (settings!.ShowServiceLabel)
             {
                 <h2>@content.ServiceLabel</h2>
@@ -23,16 +23,16 @@
             
             <div>@Html.Raw(content.ServiceTitle)</div>
         </div>
-        <div>
+        <div class="services-container">
             @if (items.Any())
             {
                 @foreach(var item in items)
                 {
-                    <div>
-                        <a href="@item.Url()" class="">
-                            <h4>@item.Name</h4>
+                    <div class="services-card">
+                        <a href="@item.Url()">
+                            <h4 class="services-card-info text-rte-m text-main">@item.Name</h4>
                             <img src="@(item.ServiceDetailThumbnail?.Url() ?? "~/images/Service-Risk-Managment.svg")" alt="Risk Management" />
-                            <p>@item.ServiceDetailExcerpt</p>
+                            <p class="services-card-info text-body text-rte-xs">@item.ServiceDetailExcerpt</p>
                         </a>
                     </div>
                 }
@@ -42,6 +42,12 @@
                 <p>No Services Available</p>
             }
             
+        </div>
+        <div class="paging-container">
+            <p class="text-white-100">Prev</p>
+            <p class="paging text-gray-400">1</p>
+            <p class="text-gray-400">2</p>
+            <p class="text-gray-400">Next</p>
         </div>
     </div>
 </section> 
