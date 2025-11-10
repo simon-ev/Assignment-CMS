@@ -4,22 +4,22 @@
     var content = (ContentModels.HeroSection)Model.Content;
 }
 
-<section>
-	<div>
-	@if (content.HeroBgImage != null)
-	{
+<section class="hero-container">
+	<div class="hero-img-container">
+		@if (content.HeroBgImage != null)
+		{
 		<img src="@content.HeroBgImage.Url()" />
-	}
+		}
 
 	</div>
 
-	<div>
-		<div>
-			<h1>@content.HeroTitle</h1>
-			@Html.Raw(content.HeroText)
+	<div class="hero-info-container">
+		<div class="hero-info">
+			<h1 class="hero-title font-bold text-rte-xl text-main">@content.HeroTitle</h1>
+			<div class="text-rte-s text-main font-regular">@Html.Raw(content.HeroText)</div>
 			@if (content.HeroLink != null)
 			{
-				<a href="@content.HeroLink.Url">@content.HeroLink.Name</a>
+				<a class="hero-btn font-bold text-sub-1" href="@content.HeroLink.Url">@content.HeroLink.Name</a>
 			}
 		</div>
 	</div>

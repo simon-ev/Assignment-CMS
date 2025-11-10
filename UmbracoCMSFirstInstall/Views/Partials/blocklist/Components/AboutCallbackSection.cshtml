@@ -1,0 +1,44 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.AboutCallbackSection)Model.Content;
+    var settings = Model.Settings as ContentModels.AboutCallbackSettings;
+}
+
+<section class="callback-section">
+    <div class="callback-container">
+        
+        <div class="callback-about-container">
+            <div class="callback-about-info">
+                @Html.Raw(content.AboutCallbackSectionBody)
+            </div>
+        </div>
+
+        <div class="callback-widget-container">
+            <div class="text-sub-1 font-bold callback-widget">
+                <p>@content.AboutCallbackSectionFormTitle</p>
+            </div>
+            <p class="callback-widget-desc text-body">@content.AboutCallbackSectionFormDescription</p>
+            <form class="form-container">
+                <div class="form-input">
+                    <input type="text" name="Name" placeholder="Name" />
+                </div>
+                <div class="form-input">
+                    <input type="email" name="Email" placeholder="Email Address" />
+                </div>
+                <div class="form-input">
+                    <input type="text" name="Phone" placeholder="Phone" />
+                </div>
+                <div class="form-input">
+                    <select name="Financial Consulting">
+                        <option>Financial Consulting</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="callback-btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
