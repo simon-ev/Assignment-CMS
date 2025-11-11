@@ -4,29 +4,23 @@
     var content = (ContentModels.TrustedSection)Model.Content;
 }
 
-<section>
+<section class="trusted-container">
     <div>
         @Html.Raw(content.TrustedTitle)
     </div>
-    <div>
+    <div class="trusted-text">
         @Html.Raw(content.TrustedText)
     </div>
-    <div>
+    <div class="btn-2-container">
         @if (content.TrustedLink != null)
         {
-            <a class="" href="@content.TrustedLink.Url">@content.TrustedLink.Name</a>
-        }
-    </div><div>
-        @if (content.TrustedBgImage != null)
-        {
-            <img src="@content.TrustedBgImage.Url()" />
-
+            <a class="btn-2 text-rte-s font-bold text-sub-1" href="@content.TrustedLink.Url">@content.TrustedLink.Name</a>
         }
     </div>
-    <div>
+    <div class="trusted-img-container">
         @if (content.TrustedImage != null)
         {
-            <img src="@content.TrustedImage.Url()" />
+            <img class="trusted-img" src="@content.TrustedImage.Url()" />
 
         }
     </div>

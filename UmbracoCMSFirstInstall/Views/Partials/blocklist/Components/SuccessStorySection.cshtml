@@ -2,4 +2,50 @@
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
     var content = (ContentModels.SuccessStorySection)Model.Content;
+    var settings = Model.Settings as ContentModels.SuccessStorySettings;
+
+    var sectionColor = settings?.SuccessBgColor?.Color ?? "#4F5955";
 }
+
+<section class="success-section" style="background-color:@(sectionColor);">
+    <div>
+        <p class="label font-bold text-rte-xs text-sub-3">@content.SuccessLabel</p>
+    </div>
+    <div class="text-white text-rte-l font-bold">
+        @Html.Raw(content.SuccessTitle)
+    </div>
+    <div class="success-numbers-container">
+        <div>
+            <h1 class="success-numbers text-sub-3">
+                689
+            </h1>
+            <p class="success-numbers-text text-white text-rte-m">
+                More than 100 customers has been served
+            </p>
+        </div>
+        <div>
+            <h1 class="success-numbers text-sub-3">
+                370
+            </h1>
+            <p class="success-numbers-text text-white text-rte-m">
+                More than 370 projects has been completed
+            </p>
+        </div>
+        <div>
+            <h1 class="success-numbers text-sub-3">
+                125
+            </h1>
+            <p class="success-numbers-text text-white text-rte-m">
+                More than 125 branches has been established in Europe and America
+            </p>
+        </div>
+    </div>
+
+    <div class="success-image">
+        @if (content.SuccessImage != null)
+        {
+            <img class="" src="@content.SuccessImage.Url()" />
+
+        }
+    </div>
+</section>

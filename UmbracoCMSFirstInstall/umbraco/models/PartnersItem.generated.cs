@@ -18,14 +18,14 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Trusted Section</summary>
-	[PublishedModel("trustedSection")]
-	public partial class TrustedSection : PublishedElementModel
+	/// <summary>Partners Item</summary>
+	[PublishedModel("partnersItem")]
+	public partial class PartnersItem : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.0+a504fd1")]
-		public new const string ModelTypeAlias = "trustedSection";
+		public new const string ModelTypeAlias = "partnersItem";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.0+a504fd1")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.0+a504fd1")]
@@ -34,14 +34,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(contentTypeCache, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.0+a504fd1")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<TrustedSection, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<PartnersItem, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(contentTypeCache), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public TrustedSection(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+		public PartnersItem(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -54,31 +54,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.0+a504fd1")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("trustedImage")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops TrustedImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "trustedImage");
-
-		///<summary>
-		/// Link
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.0+a504fd1")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("trustedLink")]
-		public virtual global::Umbraco.Cms.Core.Models.Link TrustedLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "trustedLink");
-
-		///<summary>
-		/// Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.0+a504fd1")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("trustedText")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString TrustedText => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "trustedText");
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.0+a504fd1")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("trustedTitle")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString TrustedTitle => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "trustedTitle");
+		[ImplementPropertyType("partnerImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops PartnerImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "partnerImage");
 	}
 }
