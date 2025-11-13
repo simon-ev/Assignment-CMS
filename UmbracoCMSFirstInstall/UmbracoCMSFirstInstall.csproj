@@ -4,10 +4,8 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<CompressionEnabled>false</CompressionEnabled>
-
 		<CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
 	</PropertyGroup>
-
 
 	<ItemGroup>
 		<Compile Remove="wwwroot\NewFolder\**" />
@@ -16,32 +14,22 @@
 		<None Remove="wwwroot\NewFolder\**" />
 	</ItemGroup>
 
-
 	<ItemGroup>
 		<PackageReference Include="Umbraco.Cms" Version="16.3.0" />
 		<PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="72.1.0.3" />
 		<PackageReference Include="uSync" Version="16.1.0" />
 	</ItemGroup>
 
-
 	<ItemGroup>
 		<RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="72.1.0.3"
 		  Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
 	</ItemGroup>
 
-
 	<ItemGroup>
-		<Content Include="App_Plugins\**\*" CopyToPublishDirectory="PreserveNewest" />
-		<Content Include="umbraco\**\*" CopyToPublishDirectory="PreserveNewest" />
-		<Content Include="Views\**\*" CopyToPublishDirectory="PreserveNewest" />
-		<Content Include="wwwroot\**\*" CopyToPublishDirectory="PreserveNewest" />
-		<Content Include="uSync\**\*" CopyToPublishDirectory="PreserveNewest" />
-
 		<None Include="wwwroot\media\placeholder.txt">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
 		</None>
 	</ItemGroup>
-
 
 </Project>
