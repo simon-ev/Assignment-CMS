@@ -24,4 +24,11 @@ app.UseUmbraco()
         u.UseWebsiteEndpoints();
     });
 
+var mediaPath = Path.Combine(app.Environment.WebRootPath, "media");
+if (!Directory.Exists(mediaPath))
+{
+    Directory.CreateDirectory(mediaPath);
+}
+
+
 await app.RunAsync();
