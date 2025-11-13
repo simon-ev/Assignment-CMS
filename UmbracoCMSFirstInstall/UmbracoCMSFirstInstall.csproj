@@ -12,11 +12,6 @@
     <None Remove="wwwroot\NewFolder\**" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="wwwroot\media\placeholder.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_Plugins\OnatrixRte\umbraco-package.json" />
   </ItemGroup>
 
