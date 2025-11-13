@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -57,9 +57,9 @@
     <None Include="wwwroot\media\oilde5er\contact-image.svg" />
     <None Include="wwwroot\media\pcrn0lbs\rating-stars.svg" />
     <None Include="wwwroot\media\pdtmmqft\home-hero.svg" />
-    <None Include="wwwroot\media\placeholder.keep">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+	<None Include="wwwroot\media\placeholder.keep">
+		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
     <None Include="wwwroot\media\qayfnvlf\trusted-people.svg" />
     <None Include="wwwroot\media\rwch0ble\kevin-gardner.svg" />
     <None Include="wwwroot\media\uixl4fw5\brandon-newton.svg" />
