@@ -5,13 +5,13 @@
     var teamList = content.TeamMemberList;
 }
 
-<section>
-    <div>
+<section class="team-section">
+    <div class="team-container">
         <div>  
-            <h2>@content.TeamLabel</h2>
+            <p class="text-sub-3 text-rte-xs font-bold label">@content.TeamLabel</p>
             <div>@Html.Raw(content.TeamTitle)</div>
         </div>
-        <div>
+        <div class="team-members">
             @if (teamList != null)
             {
                 for(var i = 0; i < teamList.Count; i++)

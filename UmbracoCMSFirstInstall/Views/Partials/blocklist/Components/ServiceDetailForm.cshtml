@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ServiceDetailForm)Model.Content;
+}
+
+<section class="form-section">
+    <h4 class="form-title text-main font-bold">@content.ServiceFormTitle</h4>
+    <form class="service-form">
+        <div class="form-top-container">
+            <input type="text" name="Name" placeholder="Name" />
+            <input type="text" name="Email" placeholder="Email" />
+        </div>
+        <div>
+            <textarea name="Question" placeholder="Question"></textarea>
+        </div>
+    </form>
+    @if (content.ServiceDetailLink != null)
+    {
+        <a class="form-btn font-bold text-sub-1" href="@content.ServiceDetailLink.Url">@content.ServiceDetailLink.Name</a>
+    }
+</section>

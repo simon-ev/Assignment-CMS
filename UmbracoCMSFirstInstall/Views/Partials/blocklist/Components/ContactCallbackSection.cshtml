@@ -1,0 +1,48 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ContactCallbackSection)Model.Content;
+}
+
+<section class="contact-callback-section">
+    <div class="contact-img-container">
+        @if (content.ContactCallbackBgImage != null)
+        {
+            <img class="shade" src="@content.ContactCallbackBgImage.Url()" alt="" />
+        }
+    </div>
+    
+    <div class="contact-card-container">
+        
+            <div class="contact-body">
+                <p class="label text-sub-3 text-rte-xs font-bold">@content.ContactCallbackLabel</p>
+                <h4 class="text-rte-l text-main font-bold">@content.ContactCallbackTitle</h4>
+                <p>@content.ContactCallbackFormDescription</p>
+            </div>
+            <form>
+                <div class="contact-form-container">
+                    <div class="contact-form-input">
+                        <input type="text" name="Name" placeholder="Name" />
+                    </div>
+                    <div class="contact-form-input">
+                        <input type="email" name="Email" placeholder="Email Address" />
+                    </div>
+                    <div class="contact-form-input">
+                        <input type="text" name="Phone" placeholder="Phone" />
+                    </div>
+                    <div class="contact-form-input">
+                    <select name="Financial Consulting">
+                            <option>Financial Consulting</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div>
+                @if (content.ContactCallbackLink != null)
+                {
+                    <a class="form-btn font-bold text-sub-1" href="@content.ContactCallbackLink.Url">@content.ContactCallbackLink.Name</a>
+                }
+            </div>
+        
+    </div>
+</section>

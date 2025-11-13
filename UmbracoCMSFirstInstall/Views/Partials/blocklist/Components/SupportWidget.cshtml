@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SupportWidget)Model.Content;
+}
+
+<div class="about-widget-container">
+    <div class="about-widget">
+        <h2 class="text-sub-1">@content.WidgetTitle</h2>
+        <p class="text-white">@content.WidgetText</p>
+        <form class="widget-form">
+            <div class="form-input-widget">
+                <input type="text" name="Email" placeholder="E-mail address" />
+                <img class="widget-icon" src="@(content.WidgetImage?.Url() ?? "~/images/icon-email-widget.svg")" />
+            </div>
+        </form>
+    </div>
+</div>

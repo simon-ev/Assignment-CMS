@@ -281,6 +281,16 @@
           }
         },
         {
+          "label": "Note 2",
+          "data": {
+            "tag": "span",
+            "class": "text-note-2"
+          },
+          "appearance": {
+            "style": "background-color:#999999; color:#999999; padding:5px;"
+          }
+        },
+        {
           "label": "Gray 600",
           "data": {
             "tag": "span",

@@ -1,0 +1,71 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ContactSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ContactSettings;
+    var sectionColor = settings?.ContactBgColor?.Color ?? "#ffffff";
+
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+    var contactAddress = siteSettings?.ContactAddress ?? "Ingen address angiven";
+    var contactPhone = siteSettings?.ContactPhone ?? "Ingen telefon angiven";
+    var contactEmail = siteSettings?.ContactEmail ?? "Ingen e-post angiven";
+}
+
+<section class="contact-section" style="background-color:@sectionColor;">
+    <div class="contact-image-container">
+        <div class="contact-image">
+            @if (content.ContactImage != null)
+            {
+                <img src="@content.ContactImage.Url()" />
+            }
+        </div>
+    </div>
+    
+    <div class="contact-info-container">
+        <div class="text-rte-l text-main font-bold">@Html.Raw(content.ContactTitle)</div>
+        <div class="contact-detail">
+            <div>
+                @if (content.ContactOfficeIcon != null)
+                {
+                    <img class="contact-icon" src="@content.ContactOfficeIcon.Url()" />
+                }
+            </div>
+            
+            <div class="contact-info">
+                <p class="text-rte-xs text-main font-semibold">Office location</p>
+                <p class="text-main text-rte-xs font-regular">@contactAddress</p>
+            </div>
+            
+        </div>
+        <div class="contact-detail">
+            <div>
+                @if (content.ContactPhoneIcon != null)
+                {
+                    <img class="contact-icon" src="@content.ContactPhoneIcon.Url()" />
+                }
+            </div>
+            
+            <div class="contact-info">
+                <p class="text-rte-xs text-main font-semibold">Phone number</p>
+                <p class="font-italic text-main text-rte-xs">@contactPhone</p>
+            </div>
+            
+        </div>
+        <div class="contact-detail">
+            <div>
+                @if (content.ContactEmailIcon != null)
+                {
+                    <img class="contact-icon" src="@content.ContactEmailIcon.Url()" />
+                }
+            </div>
+            
+            <div class="contact-info">
+                <p class="text-rte-xs text-main font-semibold">E-mail address</p>
+                <p class="font-italic text-main text-rte-xs">@contactEmail</p>
+            </div>
+            
+        </div>
+    </div>
+
+</section>
