@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -7,6 +7,49 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="App_Plugins\OnatrixRte\umbraco-package.json" />
+    <Content Include="wwwroot\media\placeholder.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\media\0b3hcrch\aaron-lambert.svg" />
+    <None Include="wwwroot\media\0imbk41r\home-hero.svg" />
+    <None Include="wwwroot\media\1yoknd0q\icon-phone.svg" />
+    <None Include="wwwroot\media\21jhih54\service-bonds.svg" />
+    <None Include="wwwroot\media\2cln554j\partner-04.svg" />
+    <None Include="wwwroot\media\4knawjfz\about-tina-fox.svg" />
+    <None Include="wwwroot\media\4nfeddvp\service-tax.svg" />
+    <None Include="wwwroot\media\5b1etcdp\risk-big-1.svg" />
+    <None Include="wwwroot\media\agnhil5p\miranda-dayton.svg" />
+    <None Include="wwwroot\media\b1ohhtf5\service-financial.svg" />
+    <None Include="wwwroot\media\bcxp0iee\icon-address.svg" />
+    <None Include="wwwroot\media\bdsitwcx\icon-email.svg" />
+    <None Include="wwwroot\media\bqqdz54l\success-image.svg" />
+    <None Include="wwwroot\media\ch1fqjs2\partner-06.svg" />
+    <None Include="wwwroot\media\dhppgpkm\service-assurance.svg" />
+    <None Include="wwwroot\media\e2qbqnbv\partner-03.svg" />
+    <None Include="wwwroot\media\eh3hk0u5\home-hero.svg" />
+    <None Include="wwwroot\media\g0pgkytq\signature-tina.svg" />
+    <None Include="wwwroot\media\gncp304q\trusted-bg.svg" />
+    <None Include="wwwroot\media\gnfdxfan\partner-05.svg" />
+    <None Include="wwwroot\media\jc3n4ynb\icon-email-widget.svg" />
+    <None Include="wwwroot\media\jdojkdqa\risk-big-2.svg" />
+    <None Include="wwwroot\media\jn4l2mdv\contact-bgimage.svg" />
+    <None Include="wwwroot\media\lexlct1e\aj-carter.svg" />
+    <None Include="wwwroot\media\m0bphotx\service-risk-managment.svg" />
+    <None Include="wwwroot\media\m1rdh35t\service-statistic.svg" />
+    <None Include="wwwroot\media\mm2ejcv2\partner-02.svg" />
+    <None Include="wwwroot\media\oilde5er\contact-image.svg" />
+    <None Include="wwwroot\media\pcrn0lbs\rating-stars.svg" />
+    <None Include="wwwroot\media\pdtmmqft\home-hero.svg" />
+    <None Include="wwwroot\media\qayfnvlf\trusted-people.svg" />
+    <None Include="wwwroot\media\rwch0ble\kevin-gardner.svg" />
+    <None Include="wwwroot\media\uixl4fw5\brandon-newton.svg" />
+    <None Include="wwwroot\media\vpckjws5\brandon-kerr.svg" />
+    <None Include="wwwroot\media\wbvf4lk4\brand.svg" />
+    <None Include="wwwroot\media\x5npsuw0\partner-01.svg" />
+    <None Include="wwwroot\media\yboai1f4\tina-fox.svg" />
+    <None Include="wwwroot\media\z40pudze\review-image.svg" />
+    <None Include="wwwroot\media\z5lofkvb\brandon-newton.svg" />
+    <None Include="wwwroot\media\zj5bcfov\map-background.svg" />
   </ItemGroup>
 
   <ItemGroup>
